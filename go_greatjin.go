@@ -1,3 +1,4 @@
+// package github.com/nicejin74/go_greatjin
 package go_greatjin
 
 // Add function to add two integers

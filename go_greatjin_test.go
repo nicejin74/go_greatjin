@@ -4,28 +4,27 @@ import "testing"
 
 func TestAdd(t *testing.T) {
 	type args struct {
-		a int
-		b int
+		one int
+		two int
 	}
-	tests := []struct {
-		name string
-		args args
-		want int
+	test_data := []struct {
+		title    string
+		args     args
+		expected int
 	}{
-		// TODO: Add test cases.
 		{
-			name: "Test Add 1",
+			title: "Testin Add Method",
 			args: args{
-				a: 1,
-				b: 2,
+				one: 1,
+				two: 2,
 			},
-			want: 3,
+			expected: 3,
 		},
 	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := Add(tt.args.a, tt.args.b); got != tt.want {
-				t.Errorf("Add() = %v, want %v", got, tt.want)
+	for _, daum := range test_data {
+		t.Run(daum.title, func(t *testing.T) {
+			if answer := Add(daum.args.one, daum.args.two); answer != daum.expected {
+				t.Errorf("Testing %v, expected %v", answer, daum.expected)
 			}
 		})
 	}
